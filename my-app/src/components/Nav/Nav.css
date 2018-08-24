@@ -1,0 +1,27 @@
+nav {
+    background-image: linear-gradient(silver, white);
+}
+
+h1 {
+    font-size: 18px;
+    font-weight: normal;
+    display: inline-block;
+    margin: 1%;
+}
+
+a {
+    color: black;
+    float: right;
+    margin: 1%;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: 0.5;
+}
+
+@media screen and (min-width: 550px) {
+    h1 {
+        font-size: 22px;
+    }
+}

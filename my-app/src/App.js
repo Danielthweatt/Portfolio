@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import Nav from './components/Nav';
 import Wrapper from './components/Wrapper';
+import PicturePanel from './components/Panels/PicturePanel';
+import InfoPanel from './components/Panels/InfoPanel';
 
 class App extends Component {
 	render() {
@@ -9,9 +11,8 @@ class App extends Component {
 				<Nav />
 				<main>
 					<Wrapper>
-						<h1>
-							Hi
-						</h1>
+						<PicturePanel />
+						<InfoPanel />
 					</Wrapper>
 				</main>
 			</div>

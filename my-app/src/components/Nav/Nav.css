@@ -1,22 +1,26 @@
 nav {
     background-image: linear-gradient(LightGray, white);
-    font-family: 'Graduate', cursive;
+}
+
+.clearfix::after {
+    content: "";
+    clear: both;
+    display: table;
 }
 
 h1 {
-    font-size: 18px;
-    font-weight: normal;
+    font-size: 20px;
     display: inline-block;
     margin: 1%;
 }
 
 .nav-link {
     float: right;
-} 
+    margin: 2%;
+}
 
 a {
     color: black;
-    margin: 1%;
     text-decoration: none;
 }
 
@@ -27,5 +31,8 @@ a:hover {
 @media screen and (min-width: 550px) {
     h1 {
         font-size: 22px;
+    }
+    .nav-link {
+        margin: 1%;
     }
 }

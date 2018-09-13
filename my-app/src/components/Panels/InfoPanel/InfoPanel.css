@@ -1,5 +1,5 @@
 .info-panel {
-    margin: 30px 0;
+    margin: 30px 5px;
     width: 300px;
     height: 300px;
     border: 1px solid black;
@@ -10,7 +10,13 @@
 
 @media screen and (min-width: 550px) {
     .info-panel {
-        width: 500px;
+        width: 350px;
         height: 500px;
+    }
+} 
+
+@media screen and (min-width: 1000px) {
+    .info-panel {
+        width: 500px;
     }
 } 

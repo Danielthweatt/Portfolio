@@ -4,3 +4,9 @@
     justify-content: space-around;
     align-content: flex-start;
 }
+
+@media screen and (min-width: 1200px) {
+    .wrapper {
+        justify-content: center;
+    }
+} 

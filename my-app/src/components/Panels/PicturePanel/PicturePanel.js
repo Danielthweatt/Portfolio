@@ -6,10 +6,9 @@ import './PicturePanel.css';
 const PicturePanel = () => (
 	<div className="picture-panel">
 		<img alt="Daniel" src={img} />
-		<hr />
-		<Link to="/about">About Me</Link>
-		<Link to="/portfolio">Portfolio</Link>
-		<Link to="/contact">Contact Me</Link>
+		<Link className="internal-nav-link" to="/about">About Me</Link>
+		<Link className="internal-nav-link" to="/portfolio">Portfolio</Link>
+		<Link className="internal-nav-link" to="/contact">Contact Me</Link>
 	</div>
 );
 

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import './InfoPanel.css';
 import About from '../../About';
 import Portfolio from '../../Portfolio';
 import Contact from '../../Contact';
+import './InfoPanel.css';
 
 const InfoPanel = props => (
 	<div className="info-panel">

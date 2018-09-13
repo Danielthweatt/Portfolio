@@ -9,7 +9,7 @@ class App extends Component {
 	render() {
 		return (
 			<Router>
-				<div>
+				<React.Fragment>
 					<Nav />
 					<main>
 						<Wrapper>
@@ -17,7 +17,7 @@ class App extends Component {
 							<InfoPanel />
 						</Wrapper>
 					</main>
-				</div>
+				</React.Fragment>
 			</Router>
 		);
 	}

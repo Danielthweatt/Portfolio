@@ -4,7 +4,12 @@
     height: 300px;
     border: 1px solid black;
     border-radius: 1%;
+    padding: 10px;
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19);
+}
+
+img {
+    max-height: 250px;
 }
 
 @media screen and (min-width: 550px) {

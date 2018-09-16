@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Portfolio.css';
+import Project from '../Project';
 
-const Portfolio = () => (
-    <div>
-        <h2>Portfolio</h2>
-        <hr />
-        <p>Lorem ipsum</p>
-    </div>
-);
+class Portfolio extends Component {
+    state = {
+        project: {
+            
+        }
+    };
+    
+    render() {
+		return (
+			<React.Fragment>
+				<h2>Portfolio</h2>
+		        <hr />
+			    <Project />
+			</React.Fragment>
+		);
+	}
+}
 
 export default Portfolio;

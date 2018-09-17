@@ -28,6 +28,10 @@ a:hover {
     opacity: 0.5;
 }
 
+a p:hover {
+    opacity: 0.5;
+}
+
 @media screen and (min-width: 330px) {
     .nav-link {
         margin: 2%;

@@ -1,3 +1,11 @@
+h2, h3 {
+    text-align: center;
+}
+
+p {
+    text-indent: 10px;
+}
+
 .info-panel {
     margin: 30px 5px;
     width: 300px;

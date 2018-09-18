@@ -74,14 +74,23 @@ class Portfolio extends Component {
                 {this.state.index === 0 ? ( 
                     null
                 ) : (
-                    <button onClick={this.previous}>
+                    <button
+                        type="button" 
+                        className="btn" 
+                        onClick={this.previous}
+                    >
                         Previous
                     </button>
                 )}
                 {this.state.index === this.state.projects.length - 1 ? ( 
                     null
                 ) : (
-                    <button id="next-button" onClick={this.next}>
+                    <button
+                        type="button"
+                        className="btn" 
+                        id="next-button" 
+                        onClick={this.next}
+                    >
                         Next
                     </button>
                 )}

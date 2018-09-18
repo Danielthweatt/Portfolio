@@ -75,6 +75,7 @@ class Portfolio extends Component {
                     null
                 ) : (
                     <button
+                        id="previous-button"
                         type="button" 
                         className="btn" 
                         onClick={this.previous}
@@ -86,9 +87,9 @@ class Portfolio extends Component {
                     null
                 ) : (
                     <button
+                        id="next-button"
                         type="button"
-                        className="btn" 
-                        id="next-button" 
+                        className="btn"  
                         onClick={this.next}
                     >
                         Next

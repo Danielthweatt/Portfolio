@@ -4,7 +4,11 @@
     margin-bottom: 15px;
 }
 
-.project-description {
-    margin-left: 10px;
-    margin-right: 10px;
+.github-link {
+    display: inline-block;
+}
+
+.deployed-link {
+    display: inline-block;
+    float: right;
 }

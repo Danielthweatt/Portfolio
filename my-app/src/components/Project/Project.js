@@ -5,21 +5,17 @@ const Project = props => (
 	<React.Fragment>
 		<h3>{props.projectInfo.title}</h3>
 	    <img className="project-pic" src={props.projectInfo.image} alt={props.projectInfo.title} />
-		<p className="project-description">{props.projectInfo.description}</p>
+		<p>{props.projectInfo.description}</p>
+		<a className="github-link" href={props.projectInfo.gitHubLink} target="_blank">
+            GitHub Repo
+		</a>
 		{props.projectInfo.liveLink ? (
-		    <a href={props.projectInfo.liveLink} target="_blank">
-				<p>
-                    Deployed App
-				</p>
+			<a className="deployed-link" href={props.projectInfo.liveLink} target="_blank">
+                Deployed App
 			</a>
 		) : (
 			null
 		)}
-		<a href={props.projectInfo.gitHubLink} target="_blank">
-			<p>
-                GitHub Repository
-			</p>
-		</a>
 	</React.Fragment>
 );
 

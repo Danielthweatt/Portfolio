@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import Nav from './components/Nav';
+import Header from './components/Header';
 import Wrapper from './components/Wrapper';
 import PicturePanel from './components/Panels/PicturePanel';
 import InfoPanel from './components/Panels/InfoPanel';
@@ -10,7 +10,7 @@ class App extends Component {
 		return (
 			<Router>
 				<React.Fragment>
-					<Nav />
+					<Header />
 					<main>
 						<Wrapper>
 							<PicturePanel />

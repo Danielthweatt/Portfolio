@@ -5,15 +5,15 @@ import Portfolio from '../../Portfolio';
 import Contact from '../../Contact';
 import './InfoPanel.css';
 
-const InfoPanel = props => (
-	<div className="info-panel">
+const InfoPanel = () => (
+	<section className="info-panel">
 		<Switch>
 			<Route exact path="/" render={() => <About />} />
 			<Route exact path="/about" render={() => <About />} />
 			<Route exact path="/portfolio" render={() => <Portfolio />} />
 			<Route exact path="/contact" render={() => <Contact />} />
 		</Switch>
-	</div>
+	</section>
 );
 
 export default InfoPanel;

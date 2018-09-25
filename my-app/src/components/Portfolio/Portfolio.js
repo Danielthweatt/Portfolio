@@ -74,7 +74,7 @@ class Portfolio extends Component {
                 index: prevState.index - 1
             }));
         }
-    }
+    };
 
     next = () => {
         if (this.state.index < this.state.projects.length - 1) {
@@ -82,7 +82,7 @@ class Portfolio extends Component {
                 index: prevState.index + 1
             }));
         }
-    }
+    };
     
     render() {
 		return (
@@ -116,7 +116,7 @@ class Portfolio extends Component {
                 )}
 			</React.Fragment>
 		);
-	}
-}
+	};
+};
 
 export default Portfolio;

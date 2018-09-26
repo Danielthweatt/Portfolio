@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import API from '../../utils/API';
 import './Contact.css';
 
 class Contact extends Component {
     state = {
-        name: null,
-        email: null,
-        message: null
+        name: '',
+        email: '',
+        message: ''
     };
 
     handleInputChange = (event) => {
@@ -16,9 +17,18 @@ class Contact extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        alert(this.state.name);
-        alert(this.state.email);
-        alert(this.state.message);
+        const newMessage = {
+            name: this.state.name,
+            email: this.state.email,
+            message: this.state.message
+        };
+        console.log(newMessage);
+        this.setState({
+            name: '',
+            email: '',
+            message: ''
+        });
+        API.sendEmail(newMessage);
     };
 
 	render() {

@@ -23,7 +23,7 @@ class Portfolio extends Component {
             description: "A Node.js command-line application. Built with JavaScript, Node.js, and the Spotify, " + 
             "Twitter, and OMDB API's. LIRI can search Twitter for your most recent tweets, " + 
             "search OMDB for information on movies, and search Spotify for information on music.",
-            liveLink: null,
+            liveLink: '',
             gitHubLink: "https://github.com/Danielthweatt/liri-node-app/"
         },
         {

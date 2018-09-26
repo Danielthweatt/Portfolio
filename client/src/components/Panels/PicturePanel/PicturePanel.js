@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './PicturePanel.css';
 import me from '../../../assets/images/DanielThweatt.jpg';
+import './PicturePanel.css';
 
 const PicturePanel = () => (
 	<section className="picture-panel">

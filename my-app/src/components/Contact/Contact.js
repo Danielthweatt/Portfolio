@@ -16,7 +16,9 @@ class Contact extends Component {
 
     handleSubmit = (event) => {
         event.preventDefault();
-        
+        alert(this.state.name);
+        alert(this.state.email);
+        alert(this.state.message);
     };
 
 	render() {
@@ -27,31 +29,39 @@ class Contact extends Component {
 		        <form onSubmit={this.handleSubmit}>
                     <label>
                         Name:
+                        <br />
                             <input 
-                            type="text" 
-                            name="name"
-                            value={this.state.name} 
-                            onChange={this.handleInputChange}
+                                type="text" 
+                                name="name"
+                                value={this.state.name} 
+                                onChange={this.handleInputChange}
                             />
                     </label>
                     <label>
                         Email:
+                        <br />
                             <input 
-                            type="text" 
-                            name="email"
-                            value={this.state.email} 
-                            onChange={this.handleInputChange}
+                                type="text" 
+                                name="email"
+                                value={this.state.email} 
+                                onChange={this.handleInputChange}
                             />
                     </label>
                     <label>
                         Message:
+                        <br />
                             <textarea
-                            name="message"
-                            value={this.state.message} 
-                            onChange={this.handleInputChange}
+                                name="message"
+                                value={this.state.message} 
+                                onChange={this.handleInputChange}
                             />
                     </label>
-                    <input type="submit" value="Submit" />
+                    <input 
+                        id="submit-button"
+                        type="submit"
+                        className="btn" 
+                        value="Submit" 
+                    />
 		        </form>
 	        </React.Fragment>
 		);

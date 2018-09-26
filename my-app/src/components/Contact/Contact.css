@@ -1,0 +1,16 @@
+label {
+    display: block;
+    margin-top: 5px;
+    margin-bottom: 0;
+}
+
+input[type=text], textarea {
+    border: 1px solid #cccccc;
+    width: 100%;
+}
+
+#submit-button {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+}

@@ -22,13 +22,17 @@ class Contact extends Component {
             email: this.state.email,
             message: this.state.message
         };
-        console.log(newMessage);
         this.setState({
             name: '',
             email: '',
             message: ''
         });
-        API.sendEmail(newMessage);
+        API.sendEmail(newMessage).then(function(){
+            console.log('Message sent.');
+        }).catch(function(err){
+            console.log('Oh boy, it broke: ');
+            console.log(err);
+        });
     };
 
 	render() {

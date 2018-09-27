@@ -27,8 +27,12 @@ class Contact extends Component {
             email: '',
             message: ''
         });
-        API.sendEmail(newMessage).then(function(){
-            console.log('Message sent.');
+        API.sendEmail(newMessage).then(function(res){
+            const sentMessage = res.data;
+            console.log('Message sent:');
+            console.log(` Name: ${sentMessage.name}`);
+            console.log(` Email: ${sentMessage.email}`);
+            console.log(` Message: ${sentMessage.message}`);
         }).catch(function(err){
             console.log('Oh boy, it broke: ');
             console.log(err);

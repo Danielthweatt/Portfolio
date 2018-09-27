@@ -14,3 +14,7 @@ input[type=text], textarea {
     bottom: 10px;
     left: 10px;
 }
+
+#message {
+    text-align: center;
+}

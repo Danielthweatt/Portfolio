@@ -6,7 +6,9 @@ class Contact extends Component {
     state = {
         name: '',
         email: '',
-        message: ''
+        message: '',
+        hasMessageToDisplay: false,
+        messageToDisplay: ''
     };
 
     handleInputChange = (event) => {
@@ -25,15 +27,20 @@ class Contact extends Component {
         this.setState({
             name: '',
             email: '',
-            message: ''
+            message: '',
+            hasMessageToDisplay: true,
+            messageToDisplay: 'Sending message...'
         });
-        API.sendEmail(newMessage).then(function(res){
+        API.sendEmail(newMessage).then(res => {
+            this.setState({
+                messageToDisplay: 'Message sent.'
+            });
             const sentMessage = res.data;
             console.log('Message sent:');
             console.log(` Name: ${sentMessage.name}`);
             console.log(` Email: ${sentMessage.email}`);
             console.log(` Message: ${sentMessage.message}`);
-        }).catch(function(err){
+        }).catch(err => {
             console.log('Oh boy, it broke: ');
             console.log(err);
         });
@@ -44,43 +51,55 @@ class Contact extends Component {
 			<React.Fragment>
 		        <h2>Contact Me</h2>
 		        <hr />
-		        <form onSubmit={this.handleSubmit}>
-                    <label>
-                        Name:
-                        <br />
+                {this.state.hasMessageToDisplay ? (
+                    <p id="message">
+                        {this.state.messageToDisplay}
+                    </p>
+                ) : (
+                    <React.Fragment>
+                        <p>
+                            You can send me a message here, or feel free to email 
+                            me directly at dthweatt192@gmail.com.
+                        </p>
+		                <form onSubmit={this.handleSubmit}>
+                            <label>
+                                Name:
+                                <br />
+                                <input 
+                                    type="text" 
+                                    name="name"
+                                    value={this.state.name} 
+                                    onChange={this.handleInputChange}
+                                />
+                            </label>
+                            <label>
+                                Email:
+                                <br />
+                                <input 
+                                    type="text" 
+                                    name="email"
+                                    value={this.state.email} 
+                                    onChange={this.handleInputChange}
+                                />
+                            </label>
+                            <label>
+                                Message:
+                                <br />
+                                <textarea
+                                    name="message"
+                                    value={this.state.message} 
+                                    onChange={this.handleInputChange}
+                                />
+                            </label>
                             <input 
-                                type="text" 
-                                name="name"
-                                value={this.state.name} 
-                                onChange={this.handleInputChange}
+                                id="submit-button"
+                                type="submit"
+                                className="btn" 
+                                value="Submit" 
                             />
-                    </label>
-                    <label>
-                        Email:
-                        <br />
-                            <input 
-                                type="text" 
-                                name="email"
-                                value={this.state.email} 
-                                onChange={this.handleInputChange}
-                            />
-                    </label>
-                    <label>
-                        Message:
-                        <br />
-                            <textarea
-                                name="message"
-                                value={this.state.message} 
-                                onChange={this.handleInputChange}
-                            />
-                    </label>
-                    <input 
-                        id="submit-button"
-                        type="submit"
-                        className="btn" 
-                        value="Submit" 
-                    />
-		        </form>
+		                </form>
+                    </React.Fragment>
+                )}
 	        </React.Fragment>
 		);
 	};

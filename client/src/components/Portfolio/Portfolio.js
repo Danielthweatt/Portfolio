@@ -9,6 +9,7 @@ import donation from "../../assets/images/donation.jpg";
 import Project from '../Project';
 
 class Portfolio extends Component {
+    // Images from www.pexels.com
     state = {
         projects: [{
             title: "Trivia Game",
